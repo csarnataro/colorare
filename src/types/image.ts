@@ -1,4 +1,4 @@
-export type ResultItem = {
+export type Image = {
   media: string,
   title: string,
   thumbnail: string,
