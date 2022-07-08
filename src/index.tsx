@@ -4,8 +4,9 @@ import 'virtual:windi-devtools';
 import 'windi.css';
 
 import { Route, Router, Routes } from 'solid-app-router';
-import App from './pages/main-screen';
+import Home from './pages/home';
 import SingleResult from './pages/single-result';
+import Results from './pages/results';
 import * as db from './db';
 import { Image } from './types/image';
 
@@ -21,7 +22,8 @@ render(() =>
     }}>
       <Router>
         <Routes>
-          <Route path="/" element={<App />} />;
+          <Route path="/" element={<Home />} />;
+          <Route path="/search" element={<Results />} />;
           <Route path="/image/:id" element={<SingleResult />} data={ImageData} />;
           <Route path="*" element={() => <div>Page not found</div>} />
         </Routes>
